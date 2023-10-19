@@ -4,38 +4,27 @@ using UnityEngine;
 
 public class MovementScript : MonoBehaviour
 {
-
-
-
-    public float horizontal;
-    public float vertical;
-    public bool isFacingRight = true;
-    public float speed = 6;
+    Vector2 movement;
+    public float speed = 5f;
 
     public Rigidbody2D rb;
+    public Animator animator;
 
     private void FixedUpdate()
     {
-        rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
-
-        rb.velocity = new Vector2(rb.velocity.x, vertical * speed);
+        rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
     }
 
-    private void Flip()
-    {
-        if (isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)
-        {
-            isFacingRight = !isFacingRight;
-            Vector3 localScale = transform.localScale;
-            localScale.x *= -1f;
-            transform.localScale = localScale;
-        }
-    }
+    
 
     void Update()
     {
-        horizontal = Input.GetAxisRaw("Horizontal");
-        vertical = Input.GetAxisRaw("Vertical");
-        Flip();
+        movement.x = Input.GetAxisRaw("Horizontal");
+        movement.y = Input.GetAxisRaw("Vertical");
+
+        animator.SetFloat("Horizontal", movement.x);
+        animator.SetFloat("Vertical", movement.y);
+        animator.SetFloat("Speed", movement.sqrMagnitude);
+
     }
 }
