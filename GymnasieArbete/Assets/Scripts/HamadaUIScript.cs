@@ -1,0 +1,41 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class HamadaUIScript : MonoBehaviour
+{
+
+    public GameObject UI;
+    bool ejPratatÄn = true;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            if (ejPratatÄn)
+            {
+                ejPratatÄn = false;
+                UI.SetActive(true);
+            }
+            
+            
+             
+        }
+
+
+
+    }
+
+}
