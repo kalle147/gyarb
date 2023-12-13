@@ -31741,6 +31741,19 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 548805678}
     m_Modifications:
+    - target: {fileID: 150369954392284580, guid: 382b6cb360663994b8bfce300aece605, type: 3}
+      propertyPath: lines.Array.data[0]
+      value: "Hamada: Hj\xE4lp mig!! En av mina robotar \xE4r borta, kan du hj\xE4lpa
+        mig hitta den."
+      objectReference: {fileID: 0}
+    - target: {fileID: 150369954392284580, guid: 382b6cb360663994b8bfce300aece605, type: 3}
+      propertyPath: lines.Array.data[1]
+      value: "Elliot: Jag ska se vad jag kan g\xF6ra."
+      objectReference: {fileID: 0}
+    - target: {fileID: 150369954392284580, guid: 382b6cb360663994b8bfce300aece605, type: 3}
+      propertyPath: lines.Array.data[2]
+      value: "Hamada: Tack s\xE5 mycket, kom tillbaka till mig n\xE4r du hittat den."
+      objectReference: {fileID: 0}
     - target: {fileID: 5097281436363365033, guid: 382b6cb360663994b8bfce300aece605, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
