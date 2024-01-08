@@ -8,7 +8,7 @@ public class MainMenuScript : MonoBehaviour
 
     public void playGame()
     {
-        SceneManager.LoadSceneAsync("GameScene");
+        SceneManager.LoadSceneAsync("Map1");
     }
 
     public void optMenu()
