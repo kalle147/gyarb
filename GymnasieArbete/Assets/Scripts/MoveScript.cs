@@ -10,7 +10,6 @@ public class MovementScript : MonoBehaviour
     public Rigidbody2D rb;
     public Animator animator;
 
-
     private void FixedUpdate()
     {
         rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
@@ -26,7 +25,7 @@ public class MovementScript : MonoBehaviour
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Speed", movement.sqrMagnitude);
-        
+        rb.angularVelocity = 0;
 
     }
 }
